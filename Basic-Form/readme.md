@@ -96,4 +96,7 @@ MIT License — free to use and modify.
 ---
 
 ## 👤 Author
+
 **Debashis Patra**
+
+Enjoy building and extending this creative JavaScript project! 🚀
