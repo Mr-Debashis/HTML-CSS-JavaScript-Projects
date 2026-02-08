@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #151f28;
+    overflow: hidden;
+    height: 100vh;
+}
+
+.btn {
+    position: relative;
+    width: 240px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    transition: 0.5s;
+    overflow: hidden;
+    font-size: 2em;
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    color: #e50914;
+}
+
+.btn:hover {
+    filter: drop-shadow(0 0 10px #e50914) drop-shadow(0 0 30px #e50914);
+    color: #fff;
+    letter-spacing: 0.2em;
+}
+
+.btn span {
+    position: absolute;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background: #e50914;
+    pointer-events: none;
+    transition: transform 0.2s ease-in-out;
+    z-index: -1;
+    transform: scaleY(0);
+    transform-origin: bottom;
+}
+
+.btn:hover span {
+    transform: scaleY(1);
+    transform-origin: top;
+}
+
+.btn span:nth-child(even) {
+    transform-origin: top;
+}
+
+.btn:hover span:nth-child(even) {
+    transform-origin: bottom;
+}

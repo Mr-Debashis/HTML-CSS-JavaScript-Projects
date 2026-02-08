@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico">
+    <title>Netflix Button - Debashis Patra</title>
+</head>
+
+<body>
+    <div class="container">
+        <a href="#" class="btn">NETFLIX</a>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () { //HTML page load completely, then work this fuction
+            let btns = document.querySelectorAll('.btn'); //Select All btn element
+
+            btns.forEach(function (btn) { //Create 120 span element using loop
+                let spans = []
+                for (let i = 0; i < 120; i++) {
+                    let span = document.createElement('span');
+                    span.style.left = `${i * 2}px`; //Each span holds 2px value
+                    spans.push(span); //Insert span element inside button 
+                    btn.appendChild(span);
+                    let randomDealy = (Math.random() * 1) + 0; //Set span apearence randomly
+                    span.style.transitionDelay = randomDealy + 's';
+                }
+            })
+        });
+    </script>
+</body>
+
+</html>
