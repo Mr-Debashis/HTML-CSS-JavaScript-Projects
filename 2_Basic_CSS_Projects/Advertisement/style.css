@@ -1,0 +1,58 @@
+
+.box{
+    width: 400px;
+    height: 250px;
+    border: 1px solid #ccc;
+    margin: 50px auto;
+    box-shadow: 0px 0px 7px #ccc;
+    padding: 15px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.pic{
+    height: 100%;
+    float: left;
+    position: relative;
+    animation: pic 5s infinite;
+}
+
+@keyframes pic{
+    0%{top:0; left:-200px}
+    20%{top:0; left: 0;}
+    100%{top:0; left: 0;}
+}
+
+.ad-title{
+    float: left;
+    font-family: sans-serif;
+    padding-left: 40px;
+    font-size: 35px;
+    position: relative;
+    animation: iphone 5s infinite;
+}
+
+@keyframes iphone{
+    0%{top: -200px; left: 0;}
+    20%{top:0; left: 0;}
+    100%{top:0; left: 0;}
+}
+
+.rate{
+    padding: 0;
+    margin: 0;
+    float: left;
+    font-family: sans-serif;
+    margin-left: 37px;
+    margin-top: -10px;
+}
+
+.btn{
+    float: left;
+    width: 100px;
+    height: 40px;
+    background-color: white;
+    border: 1px solid #ccc;
+    margin-left: 60px;
+    margin-top: 30px;
+}
