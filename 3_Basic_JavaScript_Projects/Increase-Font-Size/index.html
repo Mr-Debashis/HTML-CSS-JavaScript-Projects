@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <title>Increase Font Size</title>
+		<style>
+			#range{
+            position:fixed;
+            bottom: 200px;;
+		    }
+
+            #fixed-box{
+	        width:250px;
+	        height:80px;
+         	background:rgb(255, 176, 176);
+	        position:fixed;
+	        bottom: 200px;;
+		    }
+
+            #showtext{
+            text-align:center;
+            color:white;
+            font-weight:bold;
+            font-size:18px;
+			}
+		</style>
+    </head>
+
+    <body>
+		<h1 id="result">Debashis Patra</h1>
+	    <div id="fixed-box">
+        <p id="showtext"></p>
+        <input id="range" type="range" min="10" max="100" oninput="demo()">
+        </div>
+
+		<script>
+		    function demo()
+            {
+	            var x = document.getElementById("range").value;
+	            var y = document.getElementById("result");
+	            y.style.fontSize=x+"px";
+	            var z = document.getElementById("showtext");
+	            z.innerHTML = "Your font size  is now= "+x+" px";
+            }
+		</script>
+	</body>
+</html>
