@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Password</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+
+    <body>
+        <form>
+            Password <br>
+            <input type="password" name="password" id="pass" onclick="bappa()" oninput="check()">
+            <span id="msg"></span>
+            <i id="loder" class="fas fa-spinner fa-spin" style="opacity: 0;"></i>
+            <i id="checkIcon" class="fa-regular fa-circle-check" style="opacity: 0;"></i>
+        </form>
+
+        <script>
+            function bappa()
+            {
+                var x = document.getElementById("msg");
+                x.innerHTML = "Enter 10 Digit Password"
+            }
+
+            function check()
+            {
+                var x = document.getElementById("msg");
+                x.style.display = "none";
+
+                var y = document.getElementById("loder");
+                y.style.opacity = 1;
+
+                var z = document.getElementById("pass").value;
+                var z1 = z.length;
+
+                var y2 = document.getElementById("checkIcon");
+                z1>10 ? y2.style.opacity = 1 : y.style.opacity = 1;
+                z1>10 ? y.style.opacity = 0 : y2.style.opacity = 0;   
+            }
+        </script>
+    
+    </body>
+</html>
