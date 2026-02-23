@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel = "stylesheet" href = "style.css">
+        <title>Image Effect Application</title>
+    </head>
+    <body>
+        <div id = "main_box">
+            <img src = "1.jpg" id = "pic">
+            <div id = "control_box">
+                <p>Brightness</p>
+                <input type = "range" id = "brightness" min = "0" max = "500" oninput = "brightness()">
+            </div>
+
+            <div id = "control_box">
+                <p>Contrast</p>
+                <input type = "range" id = "contrast" min = "0" max = "500" oninput = "contrast()">
+            </div>
+
+            <div id = "control_box">
+                <p>Saturation</p>
+                <input type = "range" id = "saturation" min = "0" max = "500" oninput = "saturation()">
+            </div>
+        </div>
+
+        <script>
+            function brightness()
+            {
+                var x = document.getElementById("brightness").value;
+                var y = document.getElementById("pic");
+                y.style.filter = "brightness(" + x + "%)"
+            }
+
+            function contrast()
+            {
+                var x = document.getElementById("contrast").value;
+                var y = document.getElementById("pic");
+                y.style.filter = "contrast(" + x + "%)"
+            }
+
+            function saturation()
+            {
+                var x = document.getElementById("saturation").value;
+                var y = document.getElementById("pic");
+                y.style.filter = "saturate(" + x + "%)"
+            }
+        </script>
+    </body>
+</html>
