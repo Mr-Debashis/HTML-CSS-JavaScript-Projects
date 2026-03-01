@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+        <title>Call Java Script Function</title>
+    </head>
+    <body>
+        <h3>Enter Your User Name:</h3>
+        <input type = "text" id = "user"><br>
+        <h3>Enter Your Password:</h3>
+        <input type = "password" id = "pass"><br><br>
+        <input type = "submit" onclick = "submit()">
+
+        <script>
+            function submit()
+            {
+                var a = document.getElementById("user").value
+                var b = document.getElementById("pass").value
+                window.alert("Your Id - " + a + " Your Password - " + b)
+            }
+        </script>
+    </body>
+</html> 
