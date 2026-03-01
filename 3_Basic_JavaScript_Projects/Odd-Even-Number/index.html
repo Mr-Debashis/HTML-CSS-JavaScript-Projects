@@ -1,0 +1,29 @@
+<!--Odd & Even Number Finder Application-->
+
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+        <title>Odd & Even Number Finder</title>
+    </head>
+    <body>
+        <h1>Odd & Even Number Finder</h1>
+        <hr>
+        <input type = "number" id = "user">
+        <br><br>
+        <button type = "submit" onclick = "bappa()">Check</button>
+        <br>
+        <hr>
+        <p id = "output"></p>
+
+        <script>
+            function bappa()
+            {
+            var x = document.getElementById("user").value;
+            var result = x%2 == 0 ? "Even Number":"Odd Number";
+            document.getElementById("output").innerHTML = "The Number Is:- "+result;
+            }
+        </script>
+    </body>
+</html>
